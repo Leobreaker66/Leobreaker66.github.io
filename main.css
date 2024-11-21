@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "inter";
+	src: url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+}
+
+
+
+[data-theme="light"] {
+	--color-bg: #fff;
+	--color-bgraw: 255, 255, 255;
+	--color-bg2: #aaa;
+	--color-fg: #000;
+	--color-fgraw: 0, 0, 0;
+	--color-border: #888;
+}
+
+[data-theme="dark"]{
+	--color-bg: #1b1b1b;
+	--color-bgraw: 0, 0, 0;
+	--color-bg2: #4e4e4e;
+	--color-fg: #fff;
+	--color-fgraw: 255, 255, 255;
+	--color-border: #555;
+}
+
+a {
+	color: var(--color-fg);
+	text-decoration:none;
+}
+
+:root {
+	color: var(--color-fg);
+	background-color: var(--color-bg);
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+* {
+	padding: 0px;
+	position: fixed;
+}
+
+body {
+	margin: 0px;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {font-family: InterVariable, sans-serif; }
+}
+
